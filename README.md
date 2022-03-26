@@ -1,7 +1,3 @@
----
-coverY: 0
----
-
 # Delon's CTF Writeups
 
 ## CTF Placings
