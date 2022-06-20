@@ -8,7 +8,7 @@
 >
 > `nc c2.lagncrash.com 8001`
 
-![](<../../.gitbook/assets/image (15).png>)
+![](<../../.gitbook/assets/image (15) (1).png>)
 
 The server does indeed echo back our input. This might mean there is a SSTI vulnerability as the server injects our input into the template before sending us back.
 
@@ -36,7 +36,7 @@ We were able to dump the configuration of the server. This also means we can abu
 
 We dump all the available functions and found that the os module is loaded.
 
-![](<../../.gitbook/assets/image (34).png>)
+![](<../../.gitbook/assets/image (34) (1).png>)
 
 ```
 {{config.__class__.__init__.__globals__['os'].popen('ls').read()}}

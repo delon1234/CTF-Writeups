@@ -18,13 +18,13 @@ We noticed that our input is being shown directly above. This might mean a possi
 
 ![](<../../.gitbook/assets/image (32).png>)
 
-![](<../../.gitbook/assets/image (37).png>)
+![](<../../.gitbook/assets/image (37) (1).png>)
 
 From the above output, we can see that `{{7*7}}` results in 49 and `{{7*'7'}}` results in 7777777. This means the template engine running is Jinja2, where the challenge has informed us the server is running Flask.
 
 ![](../../.gitbook/assets/image.png)
 
-![](<../../.gitbook/assets/image (6).png>)
+![](<../../.gitbook/assets/image (6) (1).png>)
 
 `{{ config.items() }}` shows us the configuration of the web server which shows us the hidden flag in 'SECRET KEY'.&#x20;
 
@@ -36,13 +36,13 @@ From the above output, we can see that `{{7*7}}` results in 49 and `{{7*'7'}}` r
 >
 > `nc c2.lagncrash.com 8002`
 
-![](<../../.gitbook/assets/image (14).png>)
+![](<../../.gitbook/assets/image (14) (1).png>)
 
-![](<../../.gitbook/assets/image (24).png>)
+![](<../../.gitbook/assets/image (24) (1).png>)
 
 After dumping the subclasses, I found the class `subprocess.Popen` being available to us to launch a process for arbitrary command execution.
 
-![](<../../.gitbook/assets/image (7).png>)
+![](<../../.gitbook/assets/image (7) (1).png>)
 
 We copied the output and get the index of the class `subprocess.Popen` which is 215.
 
